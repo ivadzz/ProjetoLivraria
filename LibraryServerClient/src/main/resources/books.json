@@ -1,0 +1,13 @@
+{
+  "books":[
+  {"author": "Marco Aurélio", "name": "Meditações", "genre": "Filosofia", "numberOfCopies": 4},
+  {"author": "Jane Austen", "name": "Orgulho e Preconceito", "genre": "Romance", "numberOfCopies": 4},
+  {"author": "David Goggins", "name": "Nada Pode Me Ferir", "genre": "Autoajuda", "numberOfCopies": 2},
+  {"author": "H.G. Wells", "name": "O Homem Invisível", "genre": "Ficção Científica", "numberOfCopies": 1},
+  {"author": "Thomas More", "name": "Utopia", "genre": "Filosofia", "numberOfCopies": 14},
+  {"author": "George Orwell", "name": "A Revolução dos Bichos", "genre": "Fábula Política", "numberOfCopies": 1},
+  {"author": "C.S. Lewis", "name": "As Crônicas de Nárnia", "genre": "Fantasia", "numberOfCopies": 8},
+  {"author": "Tomás Antônio Gonzaga", "name": "Cartas Chilenas", "genre": "Sátira", "numberOfCopies": 3},
+  {"author": "Nicolau Maquiavel", "name": "O Príncipe", "genre": "Filosofia Política", "numberOfCopies": 1},
+  {"author": "Douglas Adams", "name": "O Guia do Mochileiro das Galáxias", "genre": "Ficção Científica", "numberOfCopies": 10}]
+}
