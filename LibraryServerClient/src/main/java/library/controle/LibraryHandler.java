@@ -41,7 +41,7 @@ public class LibraryHandler extends Thread {
     }
 
     private void handleAdd(String request, PrintWriter out) {
-        String[] parts = request.split(", ");
+        String[] parts = request.split("; ");
         if (parts.length == 4) {
             try {
                 String name = parts[0].substring(4).trim(); 
