@@ -44,7 +44,7 @@ public class LibraryHandler extends Thread {
         String[] parts = request.split(", ");
         if (parts.length == 4) {
             try {
-                String name = parts[0].substring(4).trim(); // Remove "ADD " prefix
+                String name = parts[0].substring(4).trim(); 
                 String author = parts[1].trim();
                 String genre = parts[2].trim();
                 int numberOfCopies = Integer.parseInt(parts[3].trim());
@@ -52,17 +52,17 @@ public class LibraryHandler extends Thread {
                 Book newBook = new Book(author, name, genre, numberOfCopies);
                 library.addBook(newBook);
                 JsonUtils.saveLibrary(library);
-                out.println("Book added successfully.");
+                out.println("Livro adicionado com sucesso.");
             } catch (NumberFormatException e) {
-                out.println("Error: Number of copies must be an integer.");
+                out.println("Erro: Numero de copias deve ser inteiro.");
             }
         } else {
-            out.println("Error: Invalid ADD command format. Use: ADD <BookName>, <Author>, <Genre>, <NumberOfCopies>");
+            out.println("Erro: Comando invalido");
         }
     }
 
     private void handleRent(String request, PrintWriter out) {
-        String bookName = request.substring(5).trim(); // Remove "RENT " prefix
+        String bookName = request.substring(5).trim(); 
         boolean bookFound = false;
 
         for (Book book : library.getBooks()) {
@@ -71,21 +71,21 @@ public class LibraryHandler extends Thread {
                 if (book.getNumberOfCopies() > 0) {
                     book.setNumberOfCopies(book.getNumberOfCopies() - 1);
                     JsonUtils.saveLibrary(library);
-                    out.println("Book rented successfully.");
+                    out.println("Livro alugado com sucesso.");
                 } else {
-                    out.println("Error: No copies of the book are available.");
+                    out.println("Erro: Sem copias disponiveis.");
                 }
                 break;
             }
         }
 
         if (!bookFound) {
-            out.println("Error: Book not found.");
+            out.println("Erro: Livro nao encontrado.");
         }
     }
 
     private void handleReturn(String request, PrintWriter out) {
-        String bookName = request.substring(7).trim(); // Remove "RETURN " prefix
+        String bookName = request.substring(7).trim(); 
         boolean bookFound = false;
 
         for (Book book : library.getBooks()) {
@@ -93,13 +93,13 @@ public class LibraryHandler extends Thread {
                 bookFound = true;
                 book.setNumberOfCopies(book.getNumberOfCopies() + 1);
                 JsonUtils.saveLibrary(library);
-                out.println("Book returned successfully.");
+                out.println("Livro retornado com sucesso.");
                 break;
             }
         }
 
         if (!bookFound) {
-            out.println("Error: Book not found.");
+            out.println("Erro: Livro nao encontrado.");
         }
     }
 }

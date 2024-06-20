@@ -16,13 +16,13 @@ public class LibraryClient {
             Scanner scanner = new Scanner(System.in);
             String userInput;
 
-            System.out.println("Connected to the library server.");
-            System.out.println("Available commands:");
+            System.out.println("Conectado ao servidor da livraria.");
+            System.out.println("Comandos disponiveis:");
             System.out.println("LIST");
-            System.out.println("ADD <BookName>, <Author>, <Genre>, <NumberOfCopies>");
-            System.out.println("RENT <BookName>");
-            System.out.println("RETURN <BookName>");
-            System.out.println("Type 'exit' to quit.");
+            System.out.println("ADD <Nome do livro>, <Autor>, <Genero>, <numero de copias>");
+            System.out.println("RENT <Nome do livro>");
+            System.out.println("RETURN <Nome do livro>");
+            System.out.println("Digite 'exit' para sair.");
 
             while (true) {
                 System.out.print("> ");

@@ -18,11 +18,11 @@ public class LibraryServer {
 
     public void start() {
         try (ServerSocket serverSocket = new ServerSocket(PORT)) {
-            System.out.println("Library server started on port " + PORT);
+            System.out.println("Servidor iniciado na porta: " + PORT);
 
             while (true) {
                 Socket clientSocket = serverSocket.accept();
-                System.out.println("New client connected");
+                System.out.println("Cliente conectado");
                 new LibraryHandler(clientSocket, library).start();
             }
         } catch (IOException e) {
